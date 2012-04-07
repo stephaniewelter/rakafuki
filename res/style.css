@@ -1,3 +1,10 @@
+/*
+.home-section-top .main-column p:first-child a,
+.home-section-top .main-column p:first-child a:visited {
+ * IMPORTANT this website is very quickly put together, and NOT built for
+ * scaling/dynamic resizing.
+ */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -48,94 +55,209 @@ table {
 }
 
 /*
-    Typography
+ * Typography
+ */
 
-    Please think before you just start using Segoe UI. I don't know of a 
-    Mac-friendly alternative.
-*/
 body {
-    font-family: "Segoe UI", "Myriad Pro", "Open Sans", sans-serif;
-    font-size: 81.25%; /* 13px */
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    font-size: 75%; /* 12px */
 }
 
 em, strong {
     font-weight: bold;
 }
 
+a, a:hover, a:visited {
+    color: #333;
+    text-decoration: none;
+    border-bottom: solid 1px #333;
+}
+
+.title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a.title, a.title:hover, a.title:visited, 
+.title a, .title a:hover, .title a:visited {
+    border: none;
+}
+
+
 /*
-    Everything else
-*/
+ * Everything else
+ */
+
+/* apply a natural box layout model to all elements */
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
 
 body {
     background-image: url(background.png);
     background-repeat: repeat-both;
+    color: #333;
 }
 
 .container {
+    position: relative;
     margin: auto;
-    width: 920px;
+    width: 1000px;
     min-height: 1200px;
     background-image: url(home-background.png);
     background-repeat: no-repeat;
 }
 
-#banner, .character {
-    overflow: hidden;
-    background-image: url(banner.gif);
-    background-repeat: no-repeat;
-}
-
-#banner {
+#menu {
     width: 100%;
-    height: 400px;
-    background-position: 0px 0px;
-    margin-bottom: 20px;
+    height: 30px; 
+    padding-left: 35px;
 }
 
-.character {
+#menu li {
     display: inline-block;
-    width: 163px;
-    height: 340px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 40px;
 }
 
-#dj-killa-watts {
-    margin-left: 10px;
-    background-position: -27px -401px;
+#menu .active {
+    color: #ababab;
 }
 
-#voila-volt {
-    background-position: -188px -401px;
+#menu a, #menu a:hover, #menu a:visited {
+    color: white;
 }
 
-#kaz-kelvin {
-    background-position: -346px -401px;
-} 
-
-#lucy-lumen {
-    background-position: -504px -401px;
-    width: 160px;
+#menu a:hover {
+    border-bottom: 1px solid white;
 }
 
-#rudy-resistor {
-    background-position: -660px -401px;
+/*
+ * Home page specific stuff
+ */
+
+.home-section-top {
+    position: relative;
+    width: 100%;
+    height: 880px;
 }
 
-#bottom-text {
-    margin-top: 60px;
+.home-section-top .main-column {
+    position: absolute;
+    bottom: 0;
+    height: 430px;
+    width: 580px;
+    color: #646363;
 }
 
-#bottom-text p {
-    margin-bottom: 1em;
+.home-section-top .main-column p:first-child {
+    display: block;
+    font-size: 20px;
+    width: 390px;
+    height: 110px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 10px;
+    line-height: 28px;
 }
 
-.image-container {
+.home-section-top .main-column p:first-child a,
+.home-section-top .main-column p:first-child a:hover,
+.home-section-top .main-column p:first-child a:visited {
+    font-weight: bold;
+    color: #646363;
+}
+
+.home-section-top .main-column p:first-child a,
+.home-section-top .main-column p:first-child a:visited {
+    border: none;
+}
+
+.home-section-top .main-column .order {
+    display: block;
+    width: 100%,
+    height: 100px;
+    margin-top: 10px;
+}
+
+.home-section-top .main-column .order > * {
+    vertical-align: top;
+}
+
+.home-section-top .main-column .order .moolah {
+    display: inline-block;
+    width: 100px; 
+    height: 100px;
+    font-size: 67px;
+    margin-left: 30px;
+}
+.home-section-top .main-column .order .moolah .smalla {
+    font-size: 48px;
+}
+
+.home-section-top .main-column .order .linkage {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 100px;
+    padding-left: 8px;
+}
+
+.home-section-top .main-column .order .linkage > * {
+    display: block;
     width: 100%;
 }
 
-a, a:hover, a:visited {
-    color: #000;
-    text-decoration: none;
-    border-bottom: dashed 1px #000;
+.home-section-top .main-column .order .linkage .order-online {
+    margin-top: 17px;
+    height: 30px;
+    width: 119px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.home-section-top .main-column .order .linkage .order-online a,
+.home-section-top .main-column .order .linkage .order-online a:hover,
+.home-section-top .main-column .order .linkage .order-online a:visited {
+    color: white;
+}
+
+.home-section-top .main-column .order .linkage .order-online a:hover {
+    border-bottom: 1px solid white;
+}
+
+.home-section-top .main-column .order .linkage .order-pta {
+    padding-top: 3px;
+    font-weight: bold;
+}
+
+.home-section-top .main-column .order .linkage .order-pta a,
+.home-section-top .main-column .order .linkage .order-pta a:hover,
+.home-section-top .main-column .order .linkage .order-pta a:visited {
+    color: #646363;
+    border-bottom: 1px solid #999;
+}
+
+.home-section-top .main-column .order .linkage .order-pta a:hover {
+    color: #333;
 }
 
 
+.home-section-top .main-column .blurbs {
+    width: 100%;
+    height: 110px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+
+.home-section-top .main-column .blurbs .blurb {
+    display: inline-block;
+    height: 110px;
+    width: 155px;
+    margin-right: 25px;
+    line-height: 16px;
+}
