@@ -411,7 +411,10 @@ body {
 }
 
 .home .fb-comments {
-    margin-left: 69px;
+    padding-left: 69px;
+    background-image: url(background-white.png);
+    background-position: -4px;
+    background-repeat: repeat-y;
 }
 
 /*
