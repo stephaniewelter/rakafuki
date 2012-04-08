@@ -412,6 +412,7 @@ body {
 
 .home .fb-comments {
     padding-left: 69px;
+    padding-right: 70px;
     background-image: url(background-white.png);
     background-position: -4px;
     background-repeat: repeat-y;
