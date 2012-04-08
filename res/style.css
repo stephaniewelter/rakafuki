@@ -410,6 +410,9 @@ body {
   box-shadow:         0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.home .fb-comments {
+    margin-left: 69px;
+}
 
 /*
  * FAQ specific
