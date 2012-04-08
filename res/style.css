@@ -59,12 +59,17 @@ table {
  */
 
 body {
-    font-family: "Helvetica Neue", "Arial", sans-serif;
+    font-family: "Arial", sans-serif;
     font-size: 75%; /* 12px */
 }
 
-em, strong {
-    font-weight: bold;
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+  font-weight: normal;
 }
 
 a, a:hover, a:visited {
@@ -105,9 +110,7 @@ body {
     position: relative;
     margin: auto;
     width: 1000px;
-    min-height: 1200px;
-    background-image: url(home-background.png);
-    background-repeat: no-repeat;
+    margin-bottom: 100px;
 }
 
 #menu {
@@ -135,9 +138,16 @@ body {
     border-bottom: 1px solid white;
 }
 
+
 /*
  * Home page specific stuff
  */
+
+.home.container {
+    width: 1000px;
+    background-image: url(home-background.png);
+    background-repeat: no-repeat;
+}
 
 .home-section-top {
     position: relative;
@@ -169,6 +179,10 @@ body {
 .home-section-top .main-column p:first-child a:visited {
     font-weight: bold;
     color: #646363;
+}
+
+.home-section-top .main-column p:first-child a:hover {
+    color: #333;
 }
 
 .home-section-top .main-column p:first-child a,
@@ -383,4 +397,133 @@ body {
     top: 242px;
     left: 701px;
     width: 184px;
+}
+
+.home .copyright {
+  margin-left: 10px;
+  margin-top: 0px;
+  padding-top: 20px;
+  width: 980px;
+  background-color: white; 
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:    0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow:         0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/*
+ * FAQ specific
+ */
+
+.container.faq {
+  width: 980px;
+  background-color: white; 
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:    0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow:         0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.faq #menu {
+  background-color: #4f4f4f;
+  padding-left: 25px;
+}
+
+.faq h1.title{
+  display: block;
+  width: 100%;
+  height: 425px;
+  background-image: url(faqtitle.jpg);
+  background-position: 350px 16px;
+  background-repeat: no-repeat;
+}
+
+.faq .questions {
+  background-color: #eae6e6;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:    0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow:         0px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 20px;
+  color: #343434;
+  margin-left: 60px;
+  width: 860px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.faq .questions .question {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.faq h2 {
+  font-size: 26px;
+  font-family: "Tahoma", sans-serif;
+  color: rgba(0,0,0,0.5);
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.faq hr {
+  border: 0;
+  display: block;
+  height: 5px;
+  width: 820px;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: white;
+}
+
+.faq .questions .question ol  {
+  list-style-type: decimal;
+}
+
+
+.faq h4 {
+  font-weight: bold;
+}
+
+.faq .questions .question h4,
+.faq .questions .question p {
+  margin-bottom: 1em;
+}
+
+.faq .order-container {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.faq ul.dates {
+  margin-bottom: 20px;
+}
+
+.faq ul.dates li {
+  display: inline-block;
+  width: 220px; 
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.faq ul.dates li span {
+  display: block;
+}
+
+.faq ul.dates li span.date {
+  font-weight: bold;
+}
+
+.faq a:hover {
+  color: #000;
+}
+
+.copyright {
+  font-size: 10px;
+  color: #504f4f;
+  margin-top: 20px;
+  padding-left: 60px;
+  line-height: 14px;
+  padding-bottom: 10px;
 }
